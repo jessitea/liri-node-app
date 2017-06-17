@@ -1,0 +1,24 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "An app to find song info, my twitter info, or movie info! Just use the commands 'my-tweets', 'spotify-this-song' + Song Title, 'movie-this' + Movie Title, or 'do-what-it-says' using node. ",
+  "main": "keys.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessitea/liri-node-app.git"
+  },
+  "author": "JT",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessitea/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/jessitea/liri-node-app#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.0.5",
+    "request": "^2.81.0",
+    "twitter": "^1.7.1"
+  }
+}
