@@ -4,8 +4,8 @@ var Twitter = require("twitter");
 var SpotifyWebApi = require('spotify-web-api-node');
 var fs = require("fs");
 var whatIwantToDo = process.argv[2];
-var mediaTitle = "";
-var nodeArgs = process.argv;
+var mediaTitle = process.argv[3];
+
 
 switch (whatIwantToDo) {
     case "my-tweets":
@@ -69,20 +69,6 @@ function twitterMe() {
 ///////////// FUNCTION TO FIND SONG, USING TITLE /////////////////////
 /////////////////////////////////////////////////////////////////////
 function spotifySearch(mediaTitle) {
-
-    //////FOR LOOP FOR MULTIPLE WORD TITLE (PARAMETER) //////
-    for (var i = 3; i < nodeArgs.length; i++) {
-
-        if (i > 3 && i < nodeArgs.length) {
-
-            mediaTitle = mediaTitle + "+" + nodeArgs[i];
-
-        } else {
-
-            mediaTitle += nodeArgs[i];
-
-        }
-    }
 
     ////////// START OF REQUEST ///////////
 
@@ -154,19 +140,6 @@ function spotifySearch(mediaTitle) {
 
 function movieFind(mediaTitle) {
 
-    //////FOR LOOP FOR MULTIPLE WORD TITLE (PARAMETER) //////
-    for (var i = 3; i < nodeArgs.length; i++) {
-
-        if (i > 3 && i < nodeArgs.length) {
-
-            mediaTitle = mediaTitle + "+" + nodeArgs[i];
-
-        } else {
-
-            mediaTitle += nodeArgs[i];
-
-        }
-    }
 
     ////////// START OF REQUEST ///////////
     if (mediaTitle === undefined) { // If no movie title entered, finds 'Mr Nobody'
